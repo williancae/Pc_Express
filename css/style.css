@@ -48,5 +48,34 @@ header .site-title{
 .header-links a{
     font-size: 0.9em;
     text-decoration: none;
-    color: white;
+    color: rgb(248, 248, 248);
+    transition: 1s;
+}
+
+.header-links:hover a{
+    color: rgb(49, 48, 48);}
+
+.nav-item{        
+    transition: 1s;
+}
+
+.nav-item:hover{
+    background-color: rgb(204, 202, 202);
+}
+
+.navbar-nav{
+    padding: 0.8em 0em;
+}
+
+.nav-nav .nav-link{
+    font-size: 0.9em;
+    color: var(--light-gray) !important;
+}
+
+.navbar-nav .nav-item .nav-link{
+    padding:  0 1.3em;
+}
+
+.navbar-nav .basket-icon{
+     margin-right: 6.5rem;
 }
