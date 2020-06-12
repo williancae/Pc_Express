@@ -79,3 +79,10 @@ header .site-title{
 .navbar-nav .basket-icon{
      margin-right: 6.5rem;
 }
+
+.carousel-inner{
+    height: cover;
+    image-resolution: cover;
+    max-height: 600px;
+    max-width: 1440px;
+}
