@@ -28,30 +28,41 @@
 <body>
   <!-- Header-->
     <header>
-       <div class="container wall">
+       <div class="wall">
            <div class="row">
-               <div class="col-md-4 col-sm-12 col-12 ">
-                   <div class="btn-group">
-                       <button
-                       class="btn border dropdown-toggle my-,d-4 my-2 text-white"
-                       data-toggle="dropdown"
-                       aria-haspopup="true"
-                       aria-expanded="false"
-                       >
-                       R$
-                       </button>
-                       <div class="dropdown-menu">
-                           <a href="#"  class="dropdown-item ">USD Dólar</a>
-                       </div>
-                   </div>
+               
+               <div class="col-md-4 col-12 p-0 ">
+                    <img 
+                    class="site-title primary-color text-white p-0" 
+                    width="150px"
+                    height="150px"
+                    src="./assets/logo.png"
+                    >
                </div>
-               <div class="col-md-4 col-12 text-center ">
-                    <h2 class="my-md-3 site-title primary-color text-white">Pc Express</h2>
-               </div>
+               <div class="col-md-4 col-sm-12 col-12 text-right">
+                <div class="btn-group text-right">
+                    <button
+                    class="btn border dropdown-toggle my-,d-4 my-2 text-white"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >
+                    R$
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#"  class="dropdown-item ">USD Dólar</a>
+                    </div>
+                </div>
+            </div>
                <div class="col-md-4 col-12 text-right">
                    <p class="my-md-4 header-links">
-                       <a href="./html/Login/login.html" class="px-2">Sign In</a>
+                       <a href="./html/Login/login.html" class="px-2 fas fa-sign-in-alt">Sign In</a>
                        <a href="./html/Login/cadastro.html" class="px-1">Register</a>
+                       <a href="./html/Login/login.html" class="px-2 fas fas fa-sign-out-alt">Logout</a>
+                       
+                   </p>
+                   <p style="color: white;">
+                     Contectado como: Rayssa Pimenta
                    </p>
                </div>
            </div>
@@ -77,7 +88,7 @@
                 <li class="nav-item active">
                   <a class="nav-link" 
                   href="#">Home 
-                  <span class="sr-only">(current)</span>
+                  <span class="sr-only">(curre  nt)</span>
                 </a>
                 </li>
 
@@ -108,7 +119,7 @@
                   <a class="nav-link" href="#">Sobre nós</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contato</a>
+                  <a class="nav-link" href="./html/contato.html">Contato</a>
                 </li>
             
               </ul>
@@ -121,7 +132,7 @@
                   <i class="fas fa-shopping-basket p-2"></i>
                 </li>
             </div>
-          </nav>
+          </nav> 
        </div>
     </header>
   <!-- Header-->
@@ -164,19 +175,20 @@
           <div class="row slider-two text-center ">
             <div class=" product pt-md-5 pt-4 ">
               <img src="./assets/gabinete-1.jpg" class="img-size" alt="produto-1">
-              <span class="border site-btn btn-span">White Monster</span>
+              <span class="border site-btn btn-span">White Monster <span class="valor">R$: 3599,99 </span></span>
+              
             </div>
             <div class=" product pt-md-5 pt-4">
               <img src="./assets/gabinete-2.jpg" class="img-size" alt="produto-2">
-              <span class="border site-btn btn-span">Black Monster</span>
+              <span class="border site-btn btn-span">Black Monster<span class="valor">R$: 3599,99 </span></span>
             </div>
             <div class="product pt-md-5 pt-4">
               <img src="./assets/gabinete-3.jpg" class="img-size" alt="produto-3">
-              <span class="border site-btn btn-span">Optmus Prime</span>
+              <span class="border site-btn btn-span">Optmus Prime<span class="valor">R$: 4030,00 </span></span>
             </div>
             <div class="product pt-md-5 pt-4">
               <img src="./assets/gabinete-4.jpg" class="img-size" alt="produto-3">
-              <span class="border site-btn btn-span">Rayssa's Pc</span>
+              <span class="border site-btn btn-span">Rayssa's Pc<span class="valor">R$: 6199,99 </span></span>
             </div>
 
           </div>

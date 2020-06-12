@@ -9,6 +9,7 @@
     --sofia: "Sofia", cursive;
 }
 
+
 .primary-color{
     color: var(--primary-color);
 }
@@ -75,7 +76,7 @@ header .site-title{
     height: cover;
     image-resolution: cover;
     max-height: 600px;
-    max-width: 1440px;
+    max-width: 2300px;
 }
 
 span{
@@ -89,13 +90,84 @@ span{
 
 }
 
+
+
 span:hover{
     padding: 10px;
 }
 
 .wall{
-    background-image: url(../assets/wall.jpg);
+    background-color: rgba(205, 92, 92, 0);
     background-size: cover;
 }
+input[type = "submit"]:hover{
+    background-color: rgb(7, 104, 7);
+}
+input[type = "text"],input[type = "password"],input[type= "email"]{
+    border: 0;
+    background: rgba(255, 255, 255, 0.945);
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgba(53, 52, 52, 0.39);
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: rgb(65, 64, 64);
+    border-radius: 24px;
+    transition: 0.25s;
+    font-family: var(--gugi);
+}
 
+input[type = "text"]:focus,  input[type = "password"]:focus,  input[type= "email"]:focus{
+    width: 280px;
+    border-color: rgb(7, 104, 7);
+}
+
+input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(7, 104, 7);
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border-radius: 24px;
+    transition: 0.25s;  
+    cursor: pointer;
+    font-family: var(--gugi);
+}
+input[type = "submit"]:hover{
+    background-color: rgb(7, 104, 7);
+}
 /*Quando comecei a fazer esse código só duas pessoas sabiam como usa-lo eu e Deus, hoje, só Deus sabe*/
+
+textarea{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid rgb(7, 104, 7);
+    padding: 14px 40px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    transition: 0.25s;  
+    cursor: pointer;
+    font-family: var(--gugi);
+}
+
+p, h1, h2, h3, h4{
+    font-family: var(--gugi);
+}
+
+.container-fluid{
+    font-family: var(--roboto);
+}
+
+.valor{
+    background-color: green;
+    color: white;
+}
