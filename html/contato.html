@@ -55,8 +55,9 @@
          </div>
             <div class="col-md-4 col-12 text-right">
                 <p class="my-md-4 header-links">
-                    <a href="./html/Login/login.html" class="px-2">Sign In</a>
-                    <a href="./html/Login/cadastro.html" class="px-1">Register</a>
+                    <a href="../html/Login/login.html" class="px-2 px-2 fas fa-sign-in-alt">Sign In</a>
+                    <a href="../html/Login/cadastro.html" class="px-1">Register</a>
+                    <a href="../html/Login/login.html" class="px-2 fas fas fa-sign-out-alt">Logout</a>
                 </p>
             </div>
         </div>
@@ -107,7 +108,7 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Sobre nós</a>
+                  <a class="nav-link" href="./about.html">Sobre nós</a>
                 </li>
                 <li class="nav-item nav-item active"">
                   <a class="nav-link" href="#">Contato</a>
@@ -142,54 +143,62 @@
           <h2 class="contact-title">Entre em contato </h2>
         </div>
         <div class="col-lg-8">
-          <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+          <form class="form-contact contact_form" action="#" method="post" id="contactForm" novalidate="novalidate">
             <div class="row">
               <div class="col-12">
                 <div class="form-group">
-                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder = 'Mensagem'></textarea>
+                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite a mensagem'" placeholder = 'Mensagem'></textarea>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <input class="form-control" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder = 'Nome'>
+                  <input class="form-control" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite o nome'" placeholder = 'Nome'>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder = 'Email'>
+                  <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite o email'" placeholder = 'Email'>
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder = 'Assunto'>
+                  <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digito o assunto'" placeholder = 'Assunto'>
                 </div>
               </div>
             </div>
+            <center>
             <div class="form-group mt-3">
               <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Enviar</button>
             </div>
+            <div class="form-group mt-3">
+              <button type="reset" class="btn btn-outline-success my-2 my-sm-0">Resetar</button>
+            </div>
+            </center>
+
           </form>
         </div>
         <div class="col-lg-4">
           <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-home"></i></span>
+            <span class="contact-info__icon">
+              <i class="fas fa-home"></i>
+            </span>
             <div class="media-body">
               <h3>Sobradinho, Brasília.</h3>
               <p>Quadra 4, área especial 1</p>
             </div>
           </div>
           <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+            <span class="contact-info__icon"><i class="fas fa-phone"></i></span>
             <div class="media-body">
-              <h3>(61) 98138 6668 </h3>
-              <p>Segunda a Sexta das 8 até as 18</p>
+              <h3>+55 (61) 99368 6025 </h3>
+              <h3>+55 (61) 98138 6668 </h3>
             </div>
           </div>
           <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-email"></i></span>
+            <span class="contact-info__icon"><i class="fas fa-at"></i></span>
             <div class="media-body">
               <h3>jotalmeida005@outlook.com</h3>
-              <p>Pode enviar suas dúvidas a qualquer hora do dia</p>
+              <h3>ralpimenta@hotmail.com</h3>
             </div>
           </div>
         </div>

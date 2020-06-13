@@ -14,7 +14,6 @@
     />
 
     <!-- Font Awesome -->
-    
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <!-- Custom Stylesheet-->
@@ -28,12 +27,12 @@
 <body>
   <!-- Header-->
     <header>
-       <div class="wall">
+       <div class="container ">
            <div class="row">
                
                <div class="col-md-4 col-12 p-0 ">
                     <img 
-                    class="site-title primary-color text-white p-0" 
+                    class=" primary-color text-white p-0" 
                     width="150px"
                     height="150px"
                     src="./assets/logo.png"
@@ -59,10 +58,6 @@
                        <a href="./html/Login/login.html" class="px-2 fas fa-sign-in-alt">Sign In</a>
                        <a href="./html/Login/cadastro.html" class="px-1">Register</a>
                        <a href="./html/Login/login.html" class="px-2 fas fas fa-sign-out-alt">Logout</a>
-                       
-                   </p>
-                   <p style="color: white;">
-                     Contectado como: Rayssa Pimenta
                    </p>
                </div>
            </div>
@@ -88,35 +83,15 @@
                 <li class="nav-item active">
                   <a class="nav-link" 
                   href="#">Home 
-                  <span class="sr-only">(curre  nt)</span>
+                  <span class="sr-only">(current)</span>
                 </a>
                 </li>
 
                 <li class="nav-item">
                   <a class="nav-link" href="#">Link</a>
                 </li>
-
-                <li class="nav-item dropdown">
-                  <a 
-                  class="nav-link dropdown-toggle" 
-                  href="#" id="navbarDropdown" 
-                  role="button" 
-                  data-toggle="dropdown" 
-                  aria-haspopup="true" 
-                  aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Sobre nós</a>
+                  <a class="nav-link" href="./html/about.html">Sobre nós</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./html/contato.html">Contato</a>
@@ -132,6 +107,7 @@
                   <i class="fas fa-shopping-basket p-2"></i>
                 </li>
             </div>
+            
           </nav> 
        </div>
     </header>
@@ -195,7 +171,34 @@
 
         </div>
       </div>
+      <div id="dialog" title="Basic dialog">
+              <p>Image:</p>
+            <img src="http://placehold.it/50x50" alt="Placeholder Image" />
+            
+            </div>
     </main>
+    <script>
+      function functionAlert(msg, myYes) {
+         var confirmBox = $("#confirm");
+         confirmBox.find(".message").text(msg);
+         confirmBox.find(".yes").unbind().click(function() {
+            confirmBox.hide();
+         });
+         confirmBox.find(".yes").click(myYes);
+         confirmBox.show();
+      }
+   </script>
+   <style>
+      
+      
+   </style>
+<div id="confirm">
+  <div class="message">This is a warning message.</div>
+  <button class="yes">OK</button>
+  <img src = "./assets/quarto-gamer-3.jpg"
+               width="120" height="70"/>
+</div>
+<input type="button" value="Click Me" onclick="functionAlert();" />
 
 
 
@@ -210,9 +213,8 @@
 
 
 
-
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/5a9891bfba.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
