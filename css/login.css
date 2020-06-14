@@ -8,7 +8,7 @@ body{
     font-family: sans-serif;
     background-image: url(../assets/wall-login.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%, 100%;
     font-family: var(--gugi);
 
 }
@@ -90,3 +90,4 @@ a:hover{
 back-login{
     background-color: green;
 }
+
