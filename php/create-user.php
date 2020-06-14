@@ -16,7 +16,6 @@ if($senha === $repeatSenha){
 }else{
     echo "<script>alert('As senhas não coincidem')</script>";
 }
-
 ?>
 
 
