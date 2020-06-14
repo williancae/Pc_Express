@@ -194,12 +194,18 @@ p, h1, h2, h3, h4{
     color: green;
 }
 
+.fas{
+    cursor: pointer;
+}
+
 .user-navbar{
     background-image: url(../assets/wall.jpg);
     width: 300px;
     height: 900px;
     text-align: center;
     color: white;
+    position: relative;
+    border-radius: 20px;
 
 }
 
@@ -207,6 +213,47 @@ p, h1, h2, h3, h4{
     width: 100px;
     height: 100px;
     margin-top: 70px;
-    cursor: pointer;
+    cursor: pointer
+}  
+
+.user-link{
+    color: white;
+    font-family: var(--gugi);
+    text-decoration: none;
+    transition: 2s;
+    margin-top: 10px;
+
+}
+
+.user-link:hover{
+    text-decoration: none;
+    color: white;
+}
+.link-space{
+    background-color: rgba(255, 255, 255, 0);
+    width: 300px;
+    height: 30px;
+    transition: 1s;
+    margin-top: 10px;
+}
+
+.link-space:hover{
+    background-color: rgba(190, 190, 190, 0.411);
+    width: 300px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.space-users{
+    background-image: url(../assets/wall-users.png);
+    background-color: #eeeded59;
+    background-size: cover;
+    width: 1060px;
+    height: 100%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    margin-left: 300px;
+    border-radius: 20px;
 }
 
