@@ -90,8 +90,6 @@ span{
 
 }
 
-
-
 span:hover{
     padding: 10px;
 }
@@ -190,4 +188,8 @@ p, h1, h2, h3, h4{
     margin-right:50px;
     margin-top: 20px;
     font-family: var(--roboto);
+}
+
+.user-page:hover{
+    color: green;
 }
