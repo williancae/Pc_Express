@@ -1,13 +1,21 @@
-<?php 
+<?php
+// Conexão
+require_once '../php/conectdb.php';
+
+// Sessão
 session_start();
-if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
-{
-  unset($_SESSION['login']);
-  unset($_SESSION['senha']);
-  header('location:userpage.html');
-  }
- 
-$logado = $_SESSION['login'];
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+	header('Location: login/login.php');
+endif;
+
+// Dados
+$id = $_SESSION['id_usuario'];
+$sql = "SELECT * FROM login WHERE id = '$id'";
+$resultado = mysqli_query($conexao, $sql);
+//$dados = mysqli_fetch_array($resultado);
+mysqli_close($conexao);
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +79,7 @@ $logado = $_SESSION['login'];
          </div>
             <div class="col-md-4 col-12 text-right">
                 <p class="my-md-4 header-links">
-                    <a href="../html/Login/login.html" class="px-2 fas fas fa-sign-out-alt user-page">Logout</a>
+                    <a href="../php/logout.php" class="px-2 fas fas fa-sign-out-alt user-page">Logout</a>
                 </p>
             </div>
         </div>

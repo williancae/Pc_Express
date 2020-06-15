@@ -12,7 +12,7 @@ if($senha === $repeatSenha){
     $correctSenha = $senha;
     $sql = "INSERT INTO `login`(`cpf`, `nome`, `email`, `senha`) VALUES ($cpf,'$name', '$email', '$senha')";
     $insert = mysqli_query($conexao, $sql);
-    header("Location: ../html/login/login.html");
+    header("Location: ../html/login/login.php");
 }else{
     echo "<script>alert('As senhas não coincidem')</script>";
 }
