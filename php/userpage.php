@@ -1,6 +1,6 @@
 <?php
 // Conexão
-require_once '../php/conectdb.php';
+require_once 'conectdb.php';
 
 
 // Sessão
@@ -18,10 +18,16 @@ endif;
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 $nome = $_SESSION['nome'];
+$cpf = $_SESSION['cpf'];
+$email = $_SESSION['email'];
+$senha= $_SESSION['senha'];
 //var_dump($nome);
 echo "<br>";
 //var_dump($dados);  
-
+var_dump($nome);
+var_dump($cpf);
+var_dump($email);
+var_dump($senha);
 mysqli_close($conexao);
 ?>
 
@@ -146,14 +152,21 @@ mysqli_close($conexao);
       </div>
       <img src="../assets/user-icon.png"  class="user-image">
       <p style="padding-top: 10px;"><?php echo $nome; ?></p> 
-      <div class="link-space">
-        <i class="fas fa-id-card"></i>
-        <a  class="user-link " href="#">Profile</a><br>
-      </div>
-      <div class="link-space">
-        <i class="fas fa-chart-pie"></i>
-        <a  class="user-link" href="#">Analytcs</a><br>
-      </div>
+
+      <form method="POST" action="../index.html">
+        <div class="link-space">
+          <i class="fas fa-id-card"></i>
+          <a  class="user-link" type="submit" value="submit" href="#">Profile</a><br>
+        </div>
+      </form>
+
+      <form method="POST" action="vsss.php">
+        <div class="link-space">
+          <i class="fas fa-chart-pie"></i>
+          <a  class="user-link" type="submit" value="submit" href="#">Analytcs</a><br>
+        </div>
+      </form>
+
       <div class="link-space">
         <a  class="user-link " href="#"> Nhaa</a><br>
       </div>
