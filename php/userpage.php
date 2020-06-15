@@ -7,7 +7,7 @@ session_start();
 
 // Verificação
 if(!isset($_SESSION['logado'])):
-	header('Location: login/login.php');
+	header('Location: login.php');
 endif;
 
 // Dados
