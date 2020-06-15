@@ -12,9 +12,9 @@ endif;
 
 // Dados
 $id = $_SESSION['id_usuario'];
-$sql = "SELECT * FROM login WHERE id = '$id'";
+$sql = "SELECT * FROM login WHERE email = '$id'";
 $resultado = mysqli_query($conexao, $sql);
-//$dados = mysqli_fetch_array($resultado);
+$dados = mysqli_fetch_array($resultado);
 mysqli_close($conexao);
 ?>
 
@@ -139,7 +139,7 @@ mysqli_close($conexao);
       
       </div>
       <img src="../assets/user-icon.png"  class="user-image">
-      <p style="padding-top: 10px;">User</p>
+      <p style="padding-top: 10px;"><?php echo $dados['nome']; ?></p>
       <div class="link-space">
         <i class="fas fa-id-card"></i>
         <a  class="user-link " href="#">Profile</a><br>

@@ -25,7 +25,7 @@ $HeaderArray = array(
     "MIME-Version: 1.0",
     "X-Prioriyi: 3",
     "Content-Type: text/html: charset=UTF-8");
-$Email_headers = implode("\n, $HeaderArray");
+$Email_headers = implode("','", $HeaderArray);    
 
 
 if (mail($Email_destinatário, $Email_assunto, $Email_conteudo, $Email_headers)) {
