@@ -1,7 +1,7 @@
 <?php
 // Conexão
 require_once 'conectdb.php';
-
+?>
 
 // Sessão
 

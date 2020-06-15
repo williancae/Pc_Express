@@ -205,7 +205,6 @@ p, h1, h2, h3, h4{
     text-align: center;
     color: white;
     position: relative;
-    border-radius: 20px;
 
 }
 
@@ -243,8 +242,10 @@ p, h1, h2, h3, h4{
     box-shadow: 2px, 2px white;
 }
 
-
-
 .table{
+    transition: 4s;
+}
+
+.table:focus{
     margin-left: 400px;
 }

@@ -154,7 +154,7 @@ mysqli_close($conexao);
       <form method="POST" action="userpage.php">
         <div class="link-space">
           <i class="fas fa-id-card"></i>
-          <a  class="user-link" type="submit" value="submit" href="#">Profile</a><br>
+          <a  class="user-link table" type="submit" value="submit" href="#">Profile</a><br>
       <form>
 
 
@@ -176,19 +176,23 @@ mysqli_close($conexao);
         <a  class="user-link " href="#"> Users Settings</a><br>
       </div>
         </div>
+<div class="table">
+      <?php
+      echo "<table>";
 
-      <table class="table">
-          <tr>
-            <th>Nome</th>
-            <th>Cpf</th>
-            <th>Email</th>
-          </tr>
-          <tr>
-            <td><?php echo $nome; ?></td>
-            <td><?php echo $cpf; ?></td>
-            <td><?php echo $email; ?></td>
-          </tr>
-          </table>
+      echo "<tr>"
+           ."<th>Nome</th>"
+           ."<th>Cpf</th>"
+           ."<th>Email</th>"
+           ."</tr>"
+          ."<tr>"
+           ."<td> $nome </td>"
+           ."<td> $cpf  </td>"
+           ."<td> $email </td>"
+          ."</tr>";
+
+          echo "</table>";
+      ?>
         </div>
       </form>
 
