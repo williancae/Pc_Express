@@ -32,4 +32,4 @@ Site autoral desenvolvido por: João Pedro Alves e Rayssa Pimenta, conta com o u
 
 <h1>Desenvolvedores</h1>
     <h2><b>João Pedro Alves</h2><h3>https://github.com/Mitico-S<b></h3>
-    <h2><b>*Rayssa Nunes Pimenta</h2></B><h3><b>https://github.com/rayssapimenta</b></h3>
+    <h2><b>*Rayssa Nunes Pimenta</h2></b><h3><b>https://github.com/rayssapimenta</b></h3>
