@@ -10,8 +10,7 @@ session_start();
 if(!isset($_SESSION['logado'])):
 	  header('Location: login.php');
 endif;
-//$resultado = $_SESSION; 
-
+$resultado = $_SESSION;
 // Dados
 //var_dump($resultado);
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -28,7 +27,7 @@ $email = $_SESSION['email'];
 //var_dump($cpf);
 //var_dump($email);
 
-mysqli_close($conexao);
+//mysqli_close($conexao);
 ?>
 
 <!DOCTYPE html>
@@ -122,7 +121,7 @@ mysqli_close($conexao);
                 <li class="nav-item">
                   <a class="nav-link" onclick="under_construction()" href="#">Computadores</a>
                 </li>
-                <li class="nav-item nav-item active">
+                <li class="nav-item nav-item">
                   <a class="nav-link" >Sobre nós</a>
                   <span class="sr-only">(current)</span>
                 </li>
@@ -144,39 +143,59 @@ mysqli_close($conexao);
        </div>
     </header>
   <!-- /Header-->
+  <table>
+  	<thead>
+	  	<tr>
+		  	<th>Name</th>
+        <th>Email</th>
+        <th>Cpf</th>
+			  <th colspan="2">Action</th>
+		  </tr>
+  	</thead>
+	
+  	<?php //while ($resultado = mysqli_fetch_array($results)) { ?>
+		  <tr>
+		  	<td><?php echo $resultado['nome']; ?></td>
+        <td><?php echo $resultado['email']; ?></td>
+        <td><?php echo $resultado['cpf']; ?></td>
+			  <td>
+			  	<a href="profile.php?edit=<?php echo $resultado['id']; ?>" class="edit_btn">Editar</a>
+		  	</td>
+		  	<td>
+		  		<a href="profile.php?del=<?php echo $resultado['id']; ?>" class="del_btn">Delete</a>
+		  	</td>
+	  	</tr>
+  	<?php //} ?>
+  </table>
+  <form method="post" action="profile.php" >
 
-  <!-- Dashborad-->
-    <div class="user-navbar col-md-4 col-12 p-0 user-text">
-      <div class="space-users"> 
-      </div>
-      <img src="../assets/user-icon.png"  class="user-image">
-      <p style="padding-top: 10px;"><?php echo $nome; ?></p> 
+	<input type="hidden" name="id" value="<?php echo $id; ?>">
 
-        <div class="link-space container">
-          <i class="fas fa-id-card"></i>
-          <a class="user-link" href="profile.php" type="submit">Profile</a>  
-        </div>
-        <div class="link-space">
-          <i class="fas fa-chart-pie"></i>
-          <a class="user-link" type="submit" value="submit" href="#">Analytcs</a><br>
-        </div>
-      <div class="link-space">
-        <a  class="user-link " href="#"> Nhaa</a><br>
-      </div>
-      <div class="link-space">
-        <a  class="user-link " href="#"> Nhaa</a><br>
-      </div>
-      <div class="link-space">
-        <i class="fas fa-users"></i>
-        <a  class="user-link " href="#"> Users Settings</a><br>
-      </div>
-        </div>
-        
-<!-- /dash -->
+	<div class="input-group">
+		<label>Name</label>
+		<input type="text" name="nome" value="<?php echo $nome; ?>">
+	</div>
+	<div class="input-group">
+		<label>email</label>
+		<input type="text" name="email" value="<?php echo $email; ?>">
+  </div>
+  <div class="input-group">
+		<label>Cpf</label>
+		<input type="text" name="cpf" value="<?php echo $cpf; ?>">
+	</div>
+  
+	<div class="input-group">
 
-        <form class="#" action="#" method="POST">
-        <?php $resultado = mysqli_query($conexao, "SELECT * FROM login"); ?> 
+		<?php if ($update == true): ?>
+			<button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
+		<?php else: ?>
+			<button class="btn" type="submit" name="save" >Save</button>
+		<?php endif ?>
+	</div>
+</form>
 
+                
+       
     
 
 
