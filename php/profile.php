@@ -11,6 +11,7 @@ if(!isset($_SESSION['logado'])):
 	  header('Location: login.php');
 endif;
 $resultado = $_SESSION;
+$update = true;
 // Dados
 //var_dump($resultado);
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -27,7 +28,7 @@ $email = $_SESSION['email'];
 //var_dump($cpf);
 //var_dump($email);
 
-//mysqli_close($conexao);
+mysqli_close($conexao);
 ?>
 
 <!DOCTYPE html>
@@ -45,13 +46,13 @@ $email = $_SESSION['email'];
      crossorigin="anonymous"
     />
 
-    <!-- Font Awesome -->
+    <!-- 
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
-    <!-- Custom Stylesheet-->
+    <!-- Custom Stylesheet
     <link rel="stylesheet" href="../css/style.css">
 
-    <!-- Slick-->
+    <!-- Slick
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <!-- Favicon-->
@@ -187,7 +188,7 @@ $email = $_SESSION['email'];
 	<div class="input-group">
 
 		<?php if ($update == true): ?>
-			<button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
+			<button class="btn" type="submit" name="update" style="background: #556B2F;">update</button>
 		<?php else: ?>
 			<button class="btn" type="submit" name="save" >Save</button>
 		<?php endif ?>
