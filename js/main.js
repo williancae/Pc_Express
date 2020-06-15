@@ -1,3 +1,5 @@
-function under_construction(){
-    window.alert("A página está em manutenção no momento, tente novamente mais tarde! :)")
+import "../css/style.css"
+
+function table(){
+   document.getElementById(profile).className = tablee;
 }

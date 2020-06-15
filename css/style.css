@@ -244,8 +244,10 @@ p, h1, h2, h3, h4{
 
 .table{
     transition: 4s;
+    margin-left: 4000px;
 }
 
 .table:focus{
-    margin-left: 400px;
+    margin-left: 300px;
+    cursor: pointer;
 }

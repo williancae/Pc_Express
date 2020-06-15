@@ -21,11 +21,11 @@ $nome = $_SESSION['nome'];
 $cpf = $_SESSION['cpf'];
 $email = $_SESSION['email'];
 //var_dump($nome);
-echo "<br>";
+//echo "<br>";
 //var_dump($dados);  
-var_dump($nome);
-var_dump($cpf);
-var_dump($email);
+//var_dump($nome);
+//var_dump($cpf);
+//var_dump($email);
 
 mysqli_close($conexao);
 ?>
@@ -151,19 +151,35 @@ mysqli_close($conexao);
       <img src="../assets/user-icon.png"  class="user-image">
       <p style="padding-top: 10px;"><?php echo $nome; ?></p> 
 
-      <form method="POST" action="userpage.php">
-        <div class="link-space">
+        <div class="link-space" onclick="table()">
           <i class="fas fa-id-card"></i>
-          <a  class="user-link table" type="submit" value="submit" href="#">Profile</a><br>
-      <form>
+          <a class="user-link tablefocus" type="submit" value="submit" href="#">Profile</a><br>
 
+          <button class="table table" style="margin-left: 300px;" >
+          <button class="table table" id="profile">
+            <?php
+              echo "<table>";
 
-      <form method="POST" action="vsss.php">
+              echo "<tr>"
+                  ."<th>Nome</th>"
+                  ."<th>Cpf</th>"
+                  ."<th>Email</th>"
+                  ."</tr>"
+                  ."<tr>"
+                  ."<td> $nome </td>"
+                  ."<td> $cpf  </td>"
+                  ."<td> $email </td>"
+                  ."</tr>";
+
+                  echo "</table>";
+            ?>
+        </div>
+
         <div class="link-space">
           <i class="fas fa-chart-pie"></i>
-          <a  class="user-link" type="submit" value="submit" href="#">Analytcs</a><br>
+          <a class="user-link" type="submit" value="submit" href="#">Analytcs</a><br>
         </div>
-      </form>
+
 
       <div class="link-space">
         <a  class="user-link " href="#"> Nhaa</a><br>
@@ -176,24 +192,7 @@ mysqli_close($conexao);
         <a  class="user-link " href="#"> Users Settings</a><br>
       </div>
         </div>
-<div class="table">
-      <?php
-      echo "<table>";
 
-      echo "<tr>"
-           ."<th>Nome</th>"
-           ."<th>Cpf</th>"
-           ."<th>Email</th>"
-           ."</tr>"
-          ."<tr>"
-           ."<td> $nome </td>"
-           ."<td> $cpf  </td>"
-           ."<td> $email </td>"
-          ."</tr>";
-
-          echo "</table>";
-      ?>
-        </div>
       </form>
 
     
@@ -206,6 +205,6 @@ mysqli_close($conexao);
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src=".. /js/main.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 </html>
