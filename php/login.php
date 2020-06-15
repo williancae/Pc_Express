@@ -28,9 +28,11 @@ if(isset($_POST['btn-entrar'])):
 				$_SESSION['logado'] = true;
 				$_SESSION['id_usuario'] = $dados['id'];
 				$_SESSION['nome'] = $dados['nome'];
-				var_dump($dados['nome']);
+				$_SESSION['cpf'] = $dados['cpf'];
+				$_SESSION['email'] = $dados['email'];
+				//var_dump($dados['nome']);
 				echo "<br>";
-				var_dump($_SESSION['nome']);
+				//var_dump($_SESSION['nome']);
 				header('Location: userpage.php');
 			else:
 				$erros[] = "<li> Usuário e senha não conferem </li>";

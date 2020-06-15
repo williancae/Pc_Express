@@ -20,14 +20,13 @@ endif;
 $nome = $_SESSION['nome'];
 $cpf = $_SESSION['cpf'];
 $email = $_SESSION['email'];
-$senha= $_SESSION['senha'];
 //var_dump($nome);
 echo "<br>";
 //var_dump($dados);  
 var_dump($nome);
 var_dump($cpf);
 var_dump($email);
-var_dump($senha);
+
 mysqli_close($conexao);
 ?>
 
@@ -61,7 +60,6 @@ mysqli_close($conexao);
 
     </head>
 
-<body style="background-image: url(../assets/wall.jpg); background-size: cover;">
   <!-- Header-->
   <header>
     <div class="container wall">
@@ -153,12 +151,12 @@ mysqli_close($conexao);
       <img src="../assets/user-icon.png"  class="user-image">
       <p style="padding-top: 10px;"><?php echo $nome; ?></p> 
 
-      <form method="POST" action="../index.html">
+      <form method="POST" action="userpage.php">
         <div class="link-space">
           <i class="fas fa-id-card"></i>
           <a  class="user-link" type="submit" value="submit" href="#">Profile</a><br>
-        </div>
-      </form>
+      <form>
+
 
       <form method="POST" action="vsss.php">
         <div class="link-space">
@@ -177,7 +175,22 @@ mysqli_close($conexao);
         <i class="fas fa-users"></i>
         <a  class="user-link " href="#"> Users Settings</a><br>
       </div>
-  
+        </div>
+
+      <table class="table">
+          <tr>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Email</th>
+          </tr>
+          <tr>
+            <td><?php echo $nome; ?></td>
+            <td><?php echo $cpf; ?></td>
+            <td><?php echo $email; ?></td>
+          </tr>
+          </table>
+        </div>
+      </form>
 
     
 
