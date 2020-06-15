@@ -2,6 +2,7 @@
 // Conexão
 require_once '../php/conectdb.php';
 
+
 // Sessão
 session_start();
 
@@ -11,10 +12,16 @@ if(!isset($_SESSION['logado'])):
 endif;
 
 // Dados
-$id = $_SESSION['id_usuario'];
-$sql = "SELECT * FROM login WHERE email = '$id'";
-$resultado = mysqli_query($conexao, $sql);
-$dados = mysqli_fetch_array($resultado);
+//var_dump($resultado);
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//$dados = mysqli_fetch_array($resultado);
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+$nome = $_SESSION['nome'];
+//var_dump($nome);
+echo "<br>";
+//var_dump($dados);  
+
 mysqli_close($conexao);
 ?>
 
@@ -135,11 +142,10 @@ mysqli_close($conexao);
 
   <!-- Dashborad-->
     <div class="user-navbar col-md-4 col-12 p-0 user-text">
-      <div class="space-users">
-      
+      <div class="space-users"> 
       </div>
       <img src="../assets/user-icon.png"  class="user-image">
-      <p style="padding-top: 10px;"><?php echo $dados['nome']; ?></p>
+      <p style="padding-top: 10px;"><?php echo $nome; ?></p> 
       <div class="link-space">
         <i class="fas fa-id-card"></i>
         <a  class="user-link " href="#">Profile</a><br>

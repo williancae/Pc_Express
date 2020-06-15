@@ -17,15 +17,20 @@ if(isset($_POST['btn-entrar'])):
 
 		if(mysqli_num_rows($resultado) > 0):
 		$senha = md5($senha);       
+		
 		$sql = "SELECT * FROM login WHERE email = '$email' AND senha = '$senha'";
 	
 		$resultado = mysqli_query($conexao, $sql);
-
+		//var_dump($resultado);
 			if(mysqli_num_rows($resultado) == 1):
 				$dados = mysqli_fetch_array($resultado);
 				mysqli_close($conexao);
 				$_SESSION['logado'] = true;
 				$_SESSION['id_usuario'] = $dados['id'];
+				$_SESSION['nome'] = $dados['nome'];
+				var_dump($dados['nome']);
+				echo "<br>";
+				var_dump($_SESSION['nome']);
 				header('Location: userpage.php');
 			else:
 				$erros[] = "<li> Usuário e senha não conferem </li>";
@@ -65,7 +70,7 @@ endif;
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="senha"  placeholder="Senha">
         <input type="submit" name="btn-entrar" value="Login">
-        <a href="cadastro.html">Não possui cadastro?</a><br>
+        <a href="../html/Login/cadastro.html">Não possui cadastro?</a><br>
         <a href="lossPassword.html">Esqueci a senha</a>
     </form>
     </div>
