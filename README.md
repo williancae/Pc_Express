@@ -4,7 +4,7 @@
 
 
 <h2>Index</h2>
-<img src="assets/printSite.jpg">
+<img src="assets/printSite.JPG">
 
 <h2><b>Descrição do Projeto</b></h2>
 
